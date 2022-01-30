@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* -----Header----*/
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/university.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10px;
+}
+nav img{
+    width: 50px;
+}
+nav .nav-links ul {
+    display: flex;
+    list-style: none;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+    
+}
+.nav-links ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.text-sec{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-sec h1{
+    font-size: 60px;
+    font-weight: 600;
+    padding: 0 0 15px 0;   
+}
+.text-sec p{
+    font-weight: 600;
+    padding: 5px 0 34px 0;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 7px 15px;
+    border-radius: 2px;
+    transition:all 0.5s ease-in-out;
+}
+.btn:hover{
+    background-color: white;
+    border:1px solid whitesmoke;
+    color: black;
+}
+i.fa.fa-times{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+i.fa.fa-bars{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:900px) {
+    html,body{
+        overflow-x: hidden;
+    }
+    .text-sec h1{
+        font-size: 30px;
+        font-weight: 600; 
+    }
+    .text-sec p{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .nav-links ul li a{
+     font-size: 40px;
+    }
+    nav .nav-links ul{
+        display: block;
+        padding-top: 33px;
+        text-align: center;
+    }
+    .nav-links{
+        width: 0px;
+        height: 100vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: all 0.5s ease-in-out;
+    }
+    i.fa.fa-times{
+        display: block;
+        padding: 10px;
+    font-size: 25px;
+    }
+    i.fa.fa-bars{
+        display: block;
+        font-size: 25px;
+    }
+}
+
+/* ----Course-Css------ */
+.courses{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 31%;
+    background: rgb(255, 244, 244);
+    border-radius: 5px;
+    margin: 0 0 5% 0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+}
+.col:hover{
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+}
+@media (max-width:700px) {
+    html,body{
+        overflow-x: hidden;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* -------Gallery-CSS----------- */
+
+.gallery{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.img-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.img-col img{
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(128,128,128,0.2);
+}
+.layer h3{
+    color: white;
+    width: 100%;
+    font-weight: 600;
+    font-size: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.layer:hover h3{
+    bottom: 50%;
+    opacity: 1;
+}
+@media (max-width:700px) {
+    .img-col img{
+        width: 100%;
+    }
+}
+
+/* ----Facility-Css-----*/
+
+.facility{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.fac-col{
+flex-basis: 31%;
+border-radius: 10px;
+margin-bottom: 5%;
+text-align: left;
+}
+.fac-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.fac-col p{
+    padding: 0;
+}
+.fac-col h3{
+    font-weight: 600;
+    text-align: left;
+    padding: 16px 0;
+}
+
+/* ------Testimonials-Css---------- */
+
+.testimonal{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.test-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    background: rgb(255, 244, 244);
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+}
+.test-col img{
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+.test-col p{
+    color: #777;
+    padding: 0;
+}
+.test-col h3{
+      font-weight: 600;
+      margin-top: 10px;
+      text-align: left;
+}
+.testimonal .fa{
+    color: #FF9529;
+
+}
+@media (max-width:700px) {
+    .test-col img{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
+
+/* ------Call-Css-------- */
+
+.Call{
+    width: 80%;
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/contact.jpg);
+    text-align: center;
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.Call h1{
+    color: white;
+    padding:0;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+/* ------footer-Css-------- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 5%;
+}
+.footer h3{
+    font-weight: 600;
+}
+.footer p{
+    margin-bottom: 30px;
+}
+.footer .fa{
+    color: #FF9529;
+    margin: 7px 0;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+i.fa.fa-facebook:hover{
+    color: black;
+    font-size: 30px;
+}
+i.fa.fa-twitter:hover{
+    color: black;
+    font-size: 30px;
+}
+i.fa.fa-github:hover{
+    color: black;
+    font-size: 30px;
+}
+i.fa.fa-instagram:hover{
+    color: black;
+    font-size: 30px;
+}
+.footer h4{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5%;
+    color: rgba(0,0,0,0.3);
+    transition: 0.5s ease-in-out;
+}
+.footer h4:hover{
+    color: black;
+    font-size: 20px;
+}
+
+
+/*---------------End Of The Website Template Project--------------------- */
